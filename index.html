@@ -2,7 +2,11 @@
 
 <head>
     <title>CSS Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
 </head>
 
 <body>
@@ -21,17 +25,20 @@
         <div class="title_3">
             <h3>Vertical Navbar</h3>
         </div>
+        <button class="show_code" onclick="openModal('v_navbar')">Open Code</button>
+        <br>
         <ul class="v_navbar">
-            <li class="v_navbar_items"><a class="v_navbar_items_link" href="">Home</a></li>
-            <li class="v_navbar_items"><a class="v_navbar_items_link" href="">News</a></li>
-            <li class="v_navbar_items"><a class="v_navbar_items_link" href="">Contact</a></li>
-            <li class="v_navbar_items"><a class="v_navbar_items_link" href="">About</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
         </ul>
     
         <div class="title_3">
             <h3>Horizontal Navbar</h3>
         </div>
-
+        <button class="show_code" onclick="openModal('h_nav')">Open Code</button>
+        <br>
         <div class="h_nav">
             <a href="#home">Home</a>
             <a href="#news">News</a>
@@ -44,7 +51,8 @@
         <div class="title_3">
             <h3>Login Form</h3>
         </div>
-
+        <button class="show_code" onclick="openModal('form_login')">Open Code</button>
+        <br>
         <div class="form_login">
             <label for="username_login">
                 Username
@@ -63,6 +71,8 @@
             <h3>Register Form</h3>
         </div>
 
+        <button class="show_code" onclick="openModal('form_register')">Open Code</button>
+        <br>
         <div class="form_register">
             <label for="email_reg">
                 Email address
@@ -91,5 +101,22 @@
             <br>
             <input type="submit" value="Sign in" id="submit">
         </div>
+
+        <!-- The Modal -->
+        <div id="code_modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>HTML</h2>
+            <pre><code class="html" id="html_code"></code></pre>
+            <h2>CSS</h2>
+            <pre><code class="language-css" id="css_code"></code></pre>
+                
+        </div>
+
+        </div>
     </div>
+    <script src="modal.js"></script>
+
 </body>
